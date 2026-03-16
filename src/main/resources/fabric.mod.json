@@ -5,7 +5,8 @@
   "name": "${name}",
   "description": "${description}",
   "authors": [
-    "${author}"
+    "${author}",
+    "DeL1TMe"
   ],
   "contact": {
     "issues": "https://github.com/Danrus1100/rpf/issues",
