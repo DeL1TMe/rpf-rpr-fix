@@ -91,8 +91,9 @@ dependencies {
     })
     modImplementation("net.fabricmc:fabric-loader:${findProperty("deps.fabric")}")
     modImplementation("net.fabricmc.fabric-api:fabric-api:${findProperty("deps.fapi")}")
-    opt("deps.rprenames") {
-        modImplementation(rootProject.files("lib/${it}.jar"))
+    opt("deps.rprenames") { jarName ->
+        val jarFile = rootProject.file("lib/${jarName}.jar")
+        if (jarFile.exists()) modImplementation(rootProject.files(jarFile))
     }
 
     testImplementation("net.fabricmc:fabric-loader-junit:${findProperty("deps.fabric")}")
@@ -194,7 +195,8 @@ stonecutter {
 //    constants {
 //        "rprenames" to propExists("deps.rprenames")
 //    }
-    val isRpRenames = propExists("deps.rprenames")
+    val jarName = findProperty("deps.rprenames") as? String
+    val isRpRenames = jarName != null && rootProject.file("lib/${jarName}.jar").exists()
     constants["rprenames"] = isRpRenames
 }
 

@@ -1,21 +1,21 @@
 package com.danrus.rpf.compat.rprenames.impl;
 
 //? if rprenames {
-import com.HiWord9.RPRenames.mod.RPRenames;
-import com.HiWord9.RPRenames.mod.RPRenamesItemGroup;
+import com.hiword9.rprenames.mod.RPRenames;
+import com.hiword9.rprenames.mod.item_group.RPRenamesItemGroup;
 //? }
 
 public class RpRenamesCompat {
 
     public static void init() {
         //? if rprenames {
-        RpfParser parser = new RpfParser(RPRenames.renamesManager);
+        RpfParser parser = new RpfParser(RPRenames.updatableRenamesManager);
 
         RenamesBridge.itemSetter = parser::updateClientItem;
         RenamesBridge.parser = parser::parse;
         RenamesBridge.active = true;
 
-        RPRenames.renamesManager.parsers.remove(RPRenames.itemModelParser);
+        RPRenames.updatableRenamesManager.parsers().remove(RPRenames.itemModelParser);
         //? }
     }
 

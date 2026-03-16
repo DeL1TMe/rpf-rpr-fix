@@ -19,6 +19,7 @@ out/
 
 # Minecraft/Forge/Fabric
 
+config/
 run/
 *.log
 *.lock

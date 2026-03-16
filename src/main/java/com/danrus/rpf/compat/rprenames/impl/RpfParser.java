@@ -1,14 +1,14 @@
 package com.danrus.rpf.compat.rprenames.impl;
 
 //? if rprenames {
-import com.HiWord9.RPRenames.api.RenamesManager;
-import com.HiWord9.RPRenames.mod.impl.rename.ItemModelRename;
-import com.HiWord9.RPRenames.mod.impl.renames_manager.updatable.parser.Parser;
-import com.HiWord9.RPRenames.mod.impl.renames_manager.updatable.parser.item_model.ItemModelData;
-import com.HiWord9.RPRenames.mod.impl.renames_manager.updatable.parser.item_model.ItemModelDataExplorer;
-import com.HiWord9.RPRenames.mod.impl.renames_manager.updatable.parser.item_model.ItemModelParser;
-import com.HiWord9.RPRenames.mod.impl.renames_manager.updatable.parser.item_model.condition.ItemModelCondition;
-import com.HiWord9.RPRenames.mod.impl.renames_manager.updatable.parser.item_model.condition.SelectCondition;
+import com.hiword9.rprenames.api.core.renames_manager.RenamesManager;
+import com.hiword9.rprenames.mod.impl.rename.ItemModelRename;
+import com.hiword9.rprenames.api.ext.renames_manager.parser.Parser;
+import com.hiword9.rprenames.mod.impl.renames_manager.updatable.parser.item_model.ItemModelData;
+import com.hiword9.rprenames.mod.impl.renames_manager.updatable.parser.item_model.ItemModelDataExplorer;
+import com.hiword9.rprenames.mod.impl.renames_manager.updatable.parser.item_model.ItemModelParser;
+import com.hiword9.rprenames.mod.impl.renames_manager.updatable.parser.item_model.condition.ItemModelCondition;
+import com.hiword9.rprenames.mod.impl.renames_manager.updatable.parser.item_model.condition.SelectCondition;
 import net.minecraft.client.renderer.item.ClientItem;
 import net.minecraft.client.renderer.item.properties.select.ComponentContents;
 import net.minecraft.core.component.DataComponentType;
